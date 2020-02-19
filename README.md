@@ -36,3 +36,17 @@
 > t = Topic.objects.get(id=1)
 > t.text
 > t.entry_set.all()
+
+## Deploy django web app to Heroku
+### Psycopg package for manage database on Heroku
+> pip install psycopg2==2.7.*
+### django-heroku handle entire configuration our app needs to run properly on Heroku
+> pip install django-heroku
+### gunicorn pakcage provides a server capable of serving apps in a live env
+> pip install gunicorn
+### Create a requirements.txt file
+> pip freeze > requirements.txt
+### Create a runtime.txt file to store python version in 1 line
+> python-3.6.9
+### Making a Procfile to start process
+> web: gunicorn learning_log.wsgi --log-file -
