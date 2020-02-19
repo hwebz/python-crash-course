@@ -16,10 +16,23 @@
 > python manage.py migrate
 ### Viewing the Project
 > python manage.py runserver
-# Starting an app inside a Django project
+### Starting an app inside a Django project
 > python manage.py startapp learning_logs
-# Make migrations for app
+### Make migrations for app
 > python manage.py makemigrations learning_logs
 > python manage.py migrate
-# Setting up a Superuser
+### Setting up a Superuser
 > python manage.py createsuperuser
+### Install bootstrap4 for django project
+> pip install django-bootstrap4
+
+### The Django Shell
+> python3 manage.py shell
+> from learning_logs.models import Topic
+> Topic.objects.all()
+> topics = Topic.objects.all()
+> for topic in topics:
+> print(topic.id, topic)
+> t = Topic.objects.get(id=1)
+> t.text
+> t.entry_set.all()
